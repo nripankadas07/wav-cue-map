@@ -1,0 +1,132 @@
+{
+  "query": {
+    "query": "wav metadata sort:stars-desc",
+    "observed": "2026-10-22T06:18:36.315Z",
+    "url": "https://github.com/search?q=wav%20metadata%20sort%3Astars-desc&type=repositories",
+    "results": [
+      "Borewit/music-metadata",
+      "tinytag/tinytag",
+      "Zeugma440/atldotnet",
+      "Serial-ATA/lofty-rs",
+      "XinhaoMei/WavCaps",
+      "Borewit/music-metadata-browser",
+      "wapmorgan/MediaFile",
+      "CelliesProjects/ESP32_VS1053_Stream",
+      "aidewoode/wahwah",
+      "geeknik/mmm"
+    ],
+    "error": null
+  },
+  "comparables": [
+    {
+      "repo": "Borewit/music-metadata",
+      "url": "https://github.com/Borewit/music-metadata",
+      "stars": 1331,
+      "pushed_at": "2026-10-21T17:21:09Z",
+      "archived": false,
+      "default_branch": "master",
+      "license_metadata": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      },
+      "observed": "2026-10-22T06:19:51.479Z",
+      "workflow": "Node/TypeScript broad audio metadata extraction and streaming APIs.",
+      "sampled_open_items": [
+        {
+          "number": 2833,
+          "title": "fix: bound metadata parser resource use",
+          "url": "https://github.com/Borewit/music-metadata/pull/2833",
+          "body_excerpt": "Resolves GHSA-6fmh-662p-w6f5, GHSA-3wmh-49gw-8xm2, and GHSA-x53g-p3f6-2cwc.\n\nBound decoded metadata tables and retained container structures with the configurable `maxMetadataEntries` option. MP4 sample runs validate counts against their payload before creating sample objects, and container parsers validate attacker-controlled lengths before allocating.\n\nReplace Musepack SV8 variable-size-field re"
+        },
+        {
+          "number": 2655,
+          "title": "Typed Native Tags",
+          "url": "https://github.com/Borewit/music-metadata/issues/2655",
+          "body_excerpt": "### Is there an existing issue for this?\n\n- [x] I have searched the existing issues\n\n### Feature description\n\nTyped native tags would not be that hard on INativeAudioMetadata, I've already done the work to create the generics and I'm just reading the specs to create the type map. Is this something that would be merged? \n\nPlease mention me directly when you reply because github notifications are ba"
+        }
+      ]
+    },
+    {
+      "repo": "tinytag/tinytag",
+      "url": "https://github.com/tinytag/tinytag",
+      "stars": 841,
+      "pushed_at": "2026-10-14T11:46:09Z",
+      "archived": false,
+      "default_branch": "master",
+      "license_metadata": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      },
+      "observed": "2026-10-22T06:19:51.668Z",
+      "workflow": "Python pip-installed audio metadata reader with small usage examples.",
+      "sampled_open_items": [
+        {
+          "number": 300,
+          "title": "OGG: Stop reading page data when no longer needed",
+          "url": "https://github.com/tinytag/tinytag/pull/300",
+          "body_excerpt": "After we parse the tags and audio properties, we can seek through the remaining pages, rather than reading them only to throw them away."
+        },
+        {
+          "number": 191,
+          "title": "Add support for ID3 Chapters (CHAP/CTOC)",
+          "url": "https://github.com/tinytag/tinytag/issues/191",
+          "body_excerpt": "This is useful for podcasts with chapters, they have a description of the chapter, and an image.\r\n\r\nSpecification: https://id3.org/id3v2-chapters-1.0 (broken)\r\n\r\nUse this instead https://mutagen-specs.readthedocs.io/en/latest/id3/id3v2-chapters-1.0.html"
+        },
+        {
+          "number": 190,
+          "title": "APE Format Support",
+          "url": "https://github.com/tinytag/tinytag/pull/190",
+          "body_excerpt": "Hey there:\r\nI forked this repo and added supports for ape format. I'm not sure if you're insterested in it.\r\nThe things I changed are:\r\n1. add `.ape` tag in `SUPPORTED_FILE_EXTENSIONS` list\r\n\r\n    https://github.com/Ace-Radom/tinytag/blob/ef28a83e332a0ab5a51045defd940d72d0b7389d/tinytag/tinytag.py#L87\r\n\r\n2. add `.ape` pointing to class `APE` under `cls._file_extension_mapping` in function `_get_pa"
+        }
+      ]
+    },
+    {
+      "repo": "Zeugma440/atldotnet",
+      "url": "https://github.com/Zeugma440/atldotnet",
+      "stars": 579,
+      "pushed_at": "2026-09-28T08:45:14Z",
+      "archived": false,
+      "default_branch": "main",
+      "license_metadata": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      },
+      "observed": "2026-10-22T06:19:51.509Z",
+      "workflow": ".NET metadata read/write library explicitly documenting RIFF LIST/CUE/SMPL support and examples.",
+      "sampled_open_items": [
+        {
+          "number": 393,
+          "title": "ID3v2.3 TDAT not read back; COMM language written as NULs",
+          "url": "https://github.com/Zeugma440/atldotnet/issues/393",
+          "body_excerpt": "**Environment:** z440.atl.core 7.18.0, .NET 10, Windows 11\n\nThese are two small ID3v2 things I noticed while testing. They're minor, so I've put them together.\n\n### 1. ID3v2.3: day and month (`TDAT`) written but not read back\n```csharp\nSettings.ID3v2_tagSubVersion = 3;\nvar t = new Track(\"song.mp3\");\nt.Date = new DateTime(2021, 3, 14);\nt.Save();\nnew Track(\"song.mp3\").Date;   // \u2192 2021-01-01, expect"
+        },
+        {
+          "number": 392,
+          "title": "ID3v2: GEOB frame MIME type and filename not preserved on save (breaks C2PA Content Credentials)",
+          "url": "https://github.com/Zeugma440/atldotnet/issues/392",
+          "body_excerpt": "**Environment:** z440.atl.core 7.18.0, .NET 10, Windows 11\n\n### Summary\nWhen an MP3's ID3v2.4 tag contains a `GEOB` frame, saving the file (after editing any *other* field) rewrites that frame's **MIME type** as `application/octet-stream` and drops its **filename**. The encapsulated object bytes themselves are preserved intact.\n\nThis matters for **C2PA Content Credentials**. Generators such as Sun"
+        },
+        {
+          "number": 151,
+          "title": "Optimization - Don't write when there's no modified metadata",
+          "url": "https://github.com/Zeugma440/atldotnet/issues/151",
+          "body_excerpt": "Prevent modifying files on Track.Save, if the metadata has not changed"
+        }
+      ]
+    }
+  ],
+  "highest_star_relevant_found": "Borewit/music-metadata",
+  "primary_sources": [
+    "https://www.mmsp.ece.mcgill.ca/Documents/AudioFormats/WAVE/Docs/riffmci.pdf"
+  ],
+  "scope": "Scoped live stars-desc GitHub keyword search, supplemented with established relevant alternatives after README/docs/source inspection; not an exhaustive global ranking. No competitor installs, timing, reliability or support response were measured. Sampled open items can include PRs; none is treated as demand for this new tool."
+}

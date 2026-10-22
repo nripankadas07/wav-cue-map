@@ -1,0 +1,37 @@
+{
+  "repo": "wav-cue-map",
+  "user": "Audio export developers inspecting cue offsets and associated labels in a small WAV file.",
+  "pain": "A cue marker can point beyond actual sample frames or refer to an address mode the export pipeline does not support.",
+  "capability": "Map RIFF-WAVE chunk boundaries, resolve direct-data cue byte offsets and report orphan/duplicate/out-of-range marker references.",
+  "alternatives": [
+    "Borewit/music-metadata",
+    "tinytag/tinytag",
+    "Zeugma440/atldotnet"
+  ],
+  "query": "wav metadata sort:stars-desc",
+  "distinct": "MIDI pedal, subtitles and media catalogs concern other event/metadata models. This inspects real binary WAVE sample/frame references and label linkage.",
+  "limits": "Little-endian RIFF WAVE<=16MiB, exact declared file length, one fmt and one data chunk,16/18-byte conventional PCM or IEEE float fmt,<=64 channels; PCM8/16/24/32-bit or float32/64-bit. Validate block alignment,byte rate,frame divisibility,chunk boundaries/padding. <=5000 chunks per container,5000 cues and5000 labels. Resolve only cue data addresses with chunkStart=blockStart=0. Unknown chunks are opaque and listed; LIST/adtl labl is read. Text is shown as lossy UTF8 with original hex; CSET not interpreted. No playback, audio decoding, RF64/RIFX, wavl/playlist,extensible/compressed addressing, fact validation or full WAV validity claim. Unsupported cue addresses are findings, unsupported fmt is an error. Refuses example overwrite.",
+  "expected": "The generated real eight-frame WAV resolves cue1 to frame3 and links its entry label.",
+  "checks": "Actual stdlib wave oracle, byte offset resolution, duplicate/orphan/out-of-range addresses, odd chunks/padding, truncation, float and invalid format checks.",
+  "primary": [
+    "https://www.mmsp.ece.mcgill.ca/Documents/AudioFormats/WAVE/Docs/riffmci.pdf"
+  ],
+  "topics": [
+    "wav",
+    "riff",
+    "audio",
+    "python"
+  ],
+  "occurrence": "GH-20261022",
+  "state": "VALIDATED",
+  "demand": "Inferred workflow need; no verified request for this new product.",
+  "inventory_compared": 213,
+  "acceptance": [
+    "The generated real eight-frame WAV resolves cue1 to frame3 and links its entry label.",
+    "Actual stdlib wave oracle, byte offset resolution, duplicate/orphan/out-of-range addresses, odd chunks/padding, truncation, float and invalid format checks.",
+    "Clean wheel-installed console outside checkout; meaningful malformed input and source preservation."
+  ],
+  "discovery": "Searchable problem-focused README/topics and runnable invented fixture, no outreach or adoption promise.",
+  "originality": "Original AI-assisted implementation; standard algorithms independently reimplemented, no third-party code/prose copied.",
+  "mutual_distinction": "Numeric constraints, concurrent register semantics, WAV cue references, ASN.1 byte boundaries and raster-mask topology are separate users, inputs and contracts."
+}

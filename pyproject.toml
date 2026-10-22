@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "wav-cue-map"
+version = "0.1.0"
+description = "Map RIFF-WAVE chunk boundaries, resolve direct-data cue byte offsets and report orphan/duplicate/out-of-range marker references."
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+readme = "README.md"
+dependencies = []
+[project.scripts]
+wav-cue-map = "wav_cue_map:main"
+[tool.setuptools]
+py-modules = ["wav_cue_map"]
