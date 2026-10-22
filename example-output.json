@@ -1,0 +1,58 @@
+{
+  "format": {
+    "code": 1,
+    "channels": 1,
+    "sample_rate": 8000,
+    "bits": 16,
+    "block_align": 2
+  },
+  "frames": 8,
+  "duration_fraction": "8/8000",
+  "chunks": [
+    {
+      "id_hex": "666d7420",
+      "offset": 12,
+      "value_offset": 20,
+      "length": 16
+    },
+    {
+      "id_hex": "63756520",
+      "offset": 36,
+      "value_offset": 44,
+      "length": 28
+    },
+    {
+      "id_hex": "4c495354",
+      "offset": 72,
+      "value_offset": 80,
+      "length": 22
+    },
+    {
+      "id_hex": "64617461",
+      "offset": 102,
+      "value_offset": 110,
+      "length": 16
+    }
+  ],
+  "cues": [
+    {
+      "id": 1,
+      "position": 0,
+      "chunk_id_hex": "64617461",
+      "chunk_start": 0,
+      "block_start": 0,
+      "sample_offset": 3,
+      "supported_direct_data": true,
+      "byte_offset": 116
+    }
+  ],
+  "labels": [
+    {
+      "id": 1,
+      "text_utf8_lossy": "entry",
+      "text_hex": "656e747279"
+    }
+  ],
+  "findings": [],
+  "limitation": "No playlist/wavl/RF64/RIFX/extensible/compressed addressing, audio decoding or playback. Cue position is reported separately; sample offsets resolve only against one direct data chunk."
+}
